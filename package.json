@@ -1,0 +1,39 @@
+{
+  "name": "synesthesia",
+  "version": "0.0.0",
+  "description": "A collection of regular expressions to match color syntax substrings from a text",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "css-color-names": "^0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "unexpected": "^3.2.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Munter/synesthesia.git"
+  },
+  "keywords": [
+    "color",
+    "match",
+    "substring",
+    "regex",
+    "regexp",
+    "syntax",
+    "css",
+    "html"
+  ],
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Munter/synesthesia/issues"
+  },
+  "homepage": "https://github.com/Munter/synesthesia"
+}
