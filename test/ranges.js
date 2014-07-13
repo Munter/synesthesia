@@ -9,6 +9,34 @@ function createRange(min, max) {
     });
 }
 
+describe('alpha range', function () {
+    // Clamp the regex as it will only occur as a partial in the final regex
+    var alpha = new RegExp('^' + ranges['1'] + '$');
+
+    it('should match the range 0-1', function (done) {
+        expect(createRange(0, 1), 'to be an array whose items satisfy', function (i) {
+            expect(i, 'to match', alpha);
+        });
+
+        done();
+    });
+
+    it('should not match numbers outside the range of 0-1', function (done) {
+        expect('-1', 'not to match', alpha);
+        expect('2', 'not to match', alpha);
+        expect('00', 'not to match', alpha);
+
+        expect('abc', 'not to match', alpha);
+        expect('0.1', 'not to match', alpha);
+        expect('.05', 'not to match', alpha);
+        expect('999', 'not to match', alpha);
+        expect('123456', 'not to match', alpha);
+        expect('&%¤#', 'not to match', alpha);
+
+        done();
+    });
+});
+
 describe('percentage range', function () {
     // Clamp the regex as it will only occur as a partial in the final regex
     var percentage = new RegExp('^' + ranges['100'] + '$');
