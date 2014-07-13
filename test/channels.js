@@ -15,6 +15,7 @@ describe('alpha channel', function () {
     it('should match the range 0-1', function (done) {
         expect(createRange(0, 1), 'to be an array whose items satisfy', function (i) {
             expect(i, 'to match', channel);
+            expect('  ' + i + '  ', 'to match', channel);
         });
 
         done();
@@ -45,6 +46,7 @@ describe('percentage channel', function () {
     it('should match the range 0-100', function (done) {
         expect(createRange(0, 100), 'to be an array whose items satisfy', function (i) {
             expect(i + '%', 'to match', channel);
+            expect('  ' + i + '%  ', 'to match', channel);
         });
 
         done();
@@ -94,6 +96,7 @@ describe('8-bit channel', function () {
     it('should match the range 0-255', function (done) {
         expect(createRange(0, 255), 'to be an array whose items satisfy', function (i) {
             expect(i, 'to match', channel);
+            expect('  ' + i + '  ', 'to match', channel);
         });
 
         done();
@@ -127,6 +130,7 @@ describe('hue channel', function () {
     it('should match the range 0-360', function (done) {
         expect(createRange(0, 360), 'to be an array whose items satisfy', function (i) {
             expect(i, 'to match', channel);
+            expect('  ' + i + '  ', 'to match', channel);
         });
 
         done();
