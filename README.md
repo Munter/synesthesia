@@ -1,9 +1,9 @@
 Synesthesia
 ===========
-[![NPM version](https://badge.fury.io/js/synesthesia.png)](http://badge.fury.io/js/synesthesia)
-[![Build Status](https://travis-ci.org/Munter/synesthesia.png?branch=master)](https://travis-ci.org/Munter/synesthesia)
-[![Coverage Status](https://coveralls.io/repos/Munter/synesthesia/badge.png)](https://coveralls.io/r/Munter/synesthesia)
-[![Dependency Status](https://david-dm.org/Munter/synesthesia.png)](https://david-dm.org/Munter/synesthesia)
+[![NPM version](https://badge.fury.io/js/synesthesia.svg)](http://badge.fury.io/js/synesthesia)
+[![Build Status](https://travis-ci.org/Munter/synesthesia.svg?branch=master)](https://travis-ci.org/Munter/synesthesia)
+[![Coverage Status](https://coveralls.io/repos/Munter/synesthesia/badge.svg?style=flat)](https://coveralls.io/r/Munter/synesthesia)
+[![Dependency Status](https://david-dm.org/Munter/synesthesia.svg)](https://david-dm.org/Munter/synesthesia)
 
 A collection og regular expressions to find occurences of valid color syntaxes.
 
