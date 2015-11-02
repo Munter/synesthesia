@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "css-color-names": "^0.0.1"
+    "css-color-names": "^0.0.3"
   },
   "devDependencies": {
     "coveralls": "^2.11.1",
