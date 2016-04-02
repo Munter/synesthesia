@@ -1,13 +1,7 @@
 var expect = require('unexpected');
 var channels = require('../lib/channels');
 
-function createRange(min, max) {
-    var range = new Array(max - min);
-
-    return range.map(function (_, idx) {
-        return idx + min;
-    });
-}
+var createRange = require('../tools/array-range');
 
 describe('alpha channel', function () {
     var channel = new RegExp('^' + channels.alpha.source + '$'); // Clamp channel as it is supposed to be used in a wider setting later
@@ -70,7 +64,7 @@ describe('percentage channel', function () {
 
     it('should not match the range 0-99 with decimals, but with missing percentage', function (done) {
         expect(createRange(0, 99), 'to be an array whose items satisfy', function (i) {
-            expect(i + '.01', 'to match', channel);
+            expect(i + '.01', 'not to match', channel);
         });
 
         done();

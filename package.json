@@ -6,16 +6,19 @@
   "directories": {
     "test": "test"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
-    "css-color-names": "^0.0.1"
+    "css-color-names": "0.0.3"
   },
   "devDependencies": {
-    "coveralls": "^2.11.1",
-    "istanbul": "^0.4.1",
-    "jshint": "^2.5.2",
-    "mocha": "^1.20.1",
-    "mocha-lcov-reporter": "0.0.1",
-    "unexpected": "^3.2.3"
+    "coveralls": "2.11.9",
+    "istanbul": "0.4.2",
+    "jshint": "2.9.1",
+    "mocha": "2.4.5",
+    "mocha-lcov-reporter": "1.2.0",
+    "unexpected": "10.11.1"
   },
   "scripts": {
     "test": "npm run lint && mocha",
