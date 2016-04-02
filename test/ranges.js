@@ -1,17 +1,15 @@
 var expect = require('unexpected');
 var ranges = require('../lib/ranges');
 
-function createRange(min, max) {
-    var range = new Array(max - min);
+var createRange = require('../tools/array-range');
 
-    return range.map(function (_, idx) {
-        return idx + min;
-    });
+function clampRange(regex) {
+    return new RegExp('^(?:' + regex.source + ')$');
 }
 
 describe('alpha range', function () {
     // Clamp the regex as it will only occur as a partial in the final regex
-    var alpha = new RegExp('^' + ranges['1'] + '$');
+    var alpha = clampRange(ranges['1']);
 
     it('should match the range 0-1', function (done) {
         expect(createRange(0, 1), 'to be an array whose items satisfy', function (i) {
@@ -39,7 +37,7 @@ describe('alpha range', function () {
 
 describe('percentage range', function () {
     // Clamp the regex as it will only occur as a partial in the final regex
-    var percentage = new RegExp('^' + ranges['100'] + '$');
+    var percentage = clampRange(ranges['100']);
 
     it('should match the range 0-100', function (done) {
         expect(createRange(0, 100), 'to be an array whose items satisfy', function (i) {
@@ -67,7 +65,7 @@ describe('percentage range', function () {
 
 describe('8bit range', function () {
     // Clamp the regex as it will only occur as a partial in the final regex
-    var eightbit = new RegExp('^' + ranges['255'] + '$');
+    var eightbit = clampRange(ranges['255']);
 
     it('should match the range 0-255', function (done) {
         expect(createRange(0, 255), 'to be an array whose items satisfy', function (i) {
@@ -95,7 +93,7 @@ describe('8bit range', function () {
 
 describe('hue range', function () {
     // Clamp the regex as it will only occur as a partial in the final regex
-    var hue = new RegExp('^' + ranges['360'] + '$');
+    var hue = clampRange(ranges['360']);
 
     it('should match the range 0-360', function (done) {
         expect(createRange(0, 360), 'to be an array whose items satisfy', function (i) {
