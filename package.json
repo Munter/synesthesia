@@ -10,7 +10,7 @@
     "lib"
   ],
   "dependencies": {
-    "css-color-names": "0.0.3"
+    "css-color-names": "0.0.4"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",
